@@ -35,7 +35,9 @@ def get_dict(s):
   pos = json_data[0]["meanings"][0]["partOfSpeech"]
   defn = json_data[0]["meanings"][0]["definitions"][0]["definition"]
   phonetic = json_data[0]["phonetic"]
-  example = json_data[0]["meanings"][0]["definitions"][0]["example"]
+  example="**No Example!**"
+  if("example" in json_data[0]["meanings"][0]["definitions"][0]):
+      example = json_data[0]["meanings"][0]["definitions"][0]["example"]
   org="**No Origin!**"
   if("origin" in json_data[0]):
       org = json_data[0]["origin"]
