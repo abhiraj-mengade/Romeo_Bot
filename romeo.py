@@ -153,6 +153,8 @@ help = """
 
 **r.quote - Displays a curious random quote & an image!**
 
+**r.echo - Repeats what the user said!**
+
 **Made by - Abhiraj Mengade :)**
 """
 
@@ -243,6 +245,9 @@ async def on_message(message):
       file = get_ana(l[1])
       embedVar = discord.Embed(title="Anagram 🧣", description=file, color=0x00ff00)
       await message.channel.send(embed=embedVar)
+
+  if msg.startswith("r.echo"):
+    await message.channel.send('*'+ msg[6:]+'*')
 
 
 #flask server function

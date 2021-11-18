@@ -25,29 +25,32 @@
 
 - r.quote - *Displays a curious random quote & an image!*
 
+- r.echo - *Repeats what the user said!*
+
+
 ### Screenshots
-1.<br>
+1. r.help command<br><br>
 ![r.help](./images/help.jpg "r.help")
 
-2.<br>
+2. r.dict command <br><br>
 ![r.dict <word>](./images/dict.jpg "r.dict")
 
-3.<br>
+3. r.defn command <br><br>
 ![r.defn <word>](./images/defn.jpg "r.defn")
 
-4.<br>
+4. r.syn command <br><br>
 ![r.syn <word>](./images/syn.jpg "r.syn")
 
-5.<br>
+5. r.anty command <br><br>
 ![r.anty <word>](./images/anty.jpg "r.anty")
 
-6.<br>
+6. r.org <br><br>
 ![r.org <word>](./images/org.jpg "r.org")
 
-7.<br>
+7. r.ana <br><br>
 ![r.ana <word>](./images/ana.jpg "r.ana")
 
-8.<br>
+8. r.quote <br><br>
 ![r.quote](./images/quote.jpg "r.quote")
 <br>
 
