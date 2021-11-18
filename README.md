@@ -6,6 +6,7 @@
 -*Built as a task for WEC Recruitment 2021*
 <br>
 
+
 ***Built using discord.py and dictionary api, this bot provides multiple commands such as:***
 
 ### Commands:
@@ -23,9 +24,14 @@
 
 - r.ana <word> - *Displays a list of Anagrams of the word*
 
+- r.slang <word> - *Displays the slang definition of the word*
+
 - r.quote - *Displays a curious random quote & an image!*
 
 - r.echo - *Repeats what the user said!*
+<br>
+
+***Flask is used to start a running server. A total of 5 different APIs are used in this.***
 
 
 ### Screenshots
@@ -50,12 +56,20 @@
 7. r.ana <br><br>
 ![r.ana <word>](./images/ana.jpg "r.ana")
 
-8. r.quote <br><br>
+8. r.slang <br><br>
+![r.slang](./images/slang.jpg "r.slang")
+
+9. r.quote <br><br>
 ![r.quote](./images/quote.jpg "r.quote")
+
+8. r.echo <br><br>
+![r.echo](./images/echo.jpg "r.echo")
 <br>
 
 
-***Flask is used to start a running server.***
+
+
+
 
 
 

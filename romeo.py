@@ -9,6 +9,7 @@ from keep_alive import keep_alive
 
 #Setting the Client & Loading the TOKEN
 load_dotenv()
+#TOKEN = os.environ['DISCORD_TOKEN']
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
 
@@ -21,6 +22,25 @@ def get_quote():
   json_data = json.loads(response.text)
   quote = json_data[0]["q"] + " -" + json_data[0]["a"]
   return(quote)
+
+"""
+get_slang(s):
+Return the slang defn of the word from the UD api.
+"""
+def get_slang(s):
+  response = requests.get("https://api.urbandictionary.com/v0/define?term="+s)
+  json_data = json.loads(response.text)
+  s="**"+s.upper()+"**\n\n"
+  if("definition" in json_data["list"][0]):
+      s+="***Definition:\n***"
+      defn = json_data["list"][0]["definition"].replace("[","")
+      defn = defn.replace("]","")
+      s +=  defn+ "\n"
+      s+="***Example:\n***"
+      example=json_data["list"][0]["example"].replace("[","")
+      example=example.replace("]","")
+      s += example +"\n"
+  return(s)
 
 """
 get_dict(s):
@@ -151,6 +171,8 @@ help = """
 
 **r.ana <word> - Displays a list of Anagrams of the word**
 
+**r.slang <word> - Displays the slang definition of the word**
+
 **r.quote - Displays a curious random quote & an image!**
 
 **r.echo - Repeats what the user said!**
@@ -246,9 +268,23 @@ async def on_message(message):
       embedVar = discord.Embed(title="Anagram 🧣", description=file, color=0x00ff00)
       await message.channel.send(embed=embedVar)
 
-  if msg.startswith("r.echo"):
-    await message.channel.send('*'+ msg[6:]+'*')
+  if msg.startswith("r.slang"):
+      l = msg.split()
+      file = get_slang(l[1])
+      embedVar = discord.Embed(title="Slang 📍", description=file, color=0x00ff00)
+      await message.channel.send(embed=embedVar)
 
+  if msg.startswith("r.echo"):
+    await message.channel.send('*'+ msg[7:]+'*')
+
+@client.event
+async def on_guild_join(guild):
+    for channel in guild.text_channels:
+        if channel.permissions_for(guild.me).send_messages:
+            embedVar = discord.Embed(title="**Hello there!  👓 **", description="***Let's see what you got in here, mate!***", color=0x00ff00)
+            await channel.send(embed=embedVar)
+    
+        break
 
 #flask server function
 keep_alive()
