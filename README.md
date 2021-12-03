@@ -1,13 +1,36 @@
 ## *Romeo Bot 👑*
 -*A discord bot with dictionary functionalities.*
-<br>
--*Use this link to invite it to your server :)* ***shorturl.at/bvR27***
-<br>
+
+
+## Task ID: Discord Dictionary Bot
+
 -*Built as a task for WEC Recruitment 2021*
+
 <br>
 
+### Video Demo Link:
 
-***Built using discord.py and dictionary api, this bot provides multiple commands such as:***
+<a href="https://vimeo.com/652965040">Click here!</a>
+
+
+<br>
+
+### How to use:
+
+<br>
+
+- *Use this link to invite it to your server :)* <a href="https://shorturl.at/bvR27">Click here!</a>
+
+- *Give permissions to the bot and type `r.help`*
+- *use commands to access bot features.*
+
+<br>
+
+### *Tech used:*
+- Python as standar language with discord.py
+- Flask for starting a server
+- Repl.it for hosting the bot
+- Uptime Robot to keep the bot up.
 
 ### Commands:
 - r.help - *a generic help command*
@@ -65,6 +88,10 @@
 8. r.echo <br><br>
 ![r.echo](./images/echo.jpg "r.echo")
 <br>
+
+### *References:*
+- https://discordpy.readthedocs.io/en/stable/
+- https://realpython.com/how-to-make-a-discord-bot-python/
 
 
 
